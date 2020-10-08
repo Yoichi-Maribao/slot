@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>SLOT</title> 
+</head>
+<body>
+  <audio preload="auto" id="gako">
+    <source src="sounds/gako.wav" type="audio/wav">
+  </audio>
+  <audio preload="auto" id="leverOn">
+    <source src="sounds/leverOn.m4a" type="audio/wav">
+  </audio>
+  <audio preload="auto" id="btnOn">
+    <source src="sounds/btnOn.wav" type="audio/wav">
+  </audio>
+  <audio preload="auto" id="bonusIntro">
+    <source src="sounds/bonus_intro.wav" type="audio/wav">
+  </audio>
+  <div class="container">
+    <div class="counter">
+      <p>総スタート</p>
+      <div class="digits">
+        <div class="empty" id='playEmptyDigits'>000</div>
+        <div class="digit" id="playCount"></div>
+      </div>
+    </div>
+    <div class="bonus-counter counter">
+      <p>ボーナス数</p>
+      <div class="digits">
+        <div class="empty" id='emptyDigits'>000</div>
+        <div class="digit" id="bonus"></div>
+      </div>
+    </div>
+    <div class="jugger">
+      <div class="gogolamp">
+        <div id="gogo" class="normal box">
+          <p>GOGO!</p>
+        </div>
+        </br>
+        <div class="svgSample1">
+          <svg width="260px" height="50px">
+            <defs>
+              <text dy="0.4em" id="outTextx">CHANCE</text>
+            </defs>
+            <use x="50%" y="50%" xlink:href="#outTextx"></use>
+            <use x="50%" y="50%" xlink:href="#outTextx"></use>
+          </svg>
+        </div>
+      </div>
+
+      <div class="swich">
+        <button accesskey="s" id="lever" class="lever"></button>  
+        <button onclick="getId(this)" accesskey="1" id="1" class="yet pointer-none"></button>
+        <button onclick="getId(this)" accesskey="2" id="2" class="yet pointer-none"></button>
+        <button onclick="getId(this)" accesskey="3" id="3" class='yet pointer-none'></button>
+      </div>
+    </div>    
+  </div>
+  <script src="./js/definition.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+#AタイプのスロットマシンをHTML/CSS及びJavaScriptで再現しています
