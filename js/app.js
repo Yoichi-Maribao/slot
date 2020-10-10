@@ -1,15 +1,16 @@
 function setCount() {
-    document.getElementById('playCount').textContent = playCounter;
-    document.getElementById('bonus').textContent = bonus;
+    document.getElementById('totalCounter').innerHTML = totalCounter;
+    document.getElementById('bonus').innerHTML = bonus;
+    document.getElementById('playCounter').innerHTML = totalCounter;
 
-    if(playCounter < 10){
-        playEmptyDigits.textContent = "000";
-    } else if(playCounter >= 10 && playCounter < 100) {
-        playEmptyDigits.textContent = "00";
-    } else if(playCounter >= 100 && playCounter < 1000) {
-        playEmptyDigits.textContent = "0";
-    } else if(playCounter >= 1000) {
-        playEmptyDigits.textContent = "";
+    if(totalCounter < 10){
+        totalEmptyDigits.textContent = "000";
+    } else if(totalCounter >= 10 && totalCounter < 100) {
+        totalEmptyDigits.textContent = "00";
+    } else if(totalCounter >= 100 && totalCounter < 1000) {
+        totalEmptyDigits.textContent = "0";
+    } else if(totalCounter >= 1000) {
+        totalEmptyDigits.textContent = "";
     }
 
     if(bonus < 10){
@@ -22,6 +23,15 @@ function setCount() {
         emptyDigits.textContent = "";
     }
 
+    if(playCounter < 10){
+        playEmptyDigits.textContent = "000";
+    } else if(playCounter >= 10 && playCounter < 100) {
+        playEmptyDigits.textContent = "00";
+    } else if(playCounter >= 100 && playCounter < 1000) {
+        playEmptyDigits.textContent = "0";
+    } else if(playCounter >= 1000) {
+        playEmptyDigits.textContent = "";
+    }
 }
 setCount();
 
@@ -114,6 +124,7 @@ function getId(id) {
         if(flag===true){
             flash();
             bonus++;
+            playCounter = 0;
             isFlash = true;
             console.log(isFlash);
         }
@@ -140,6 +151,7 @@ function getId(id) {
         
         isLever = false;
         count = 0;
+        totalCounter ++;
         playCounter ++;
         setCount();
     }
