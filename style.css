@@ -13,11 +13,12 @@
 }
 .counters {
     display: flex;
+    margin-bottom: 20px;
 }
 .counter {
     font-family: 'Digital ints';
     height: 50px;
-    width: 200px;
+    width: 215px;
     background-color: #000;
     display: flex;
     align-items: center;
@@ -48,12 +49,33 @@
 }
 .reel-frame {
     display: flex;
+    border: 5px solid black;
+    height: 220px;
+    width: 460px;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 .reels li {
     list-style: none;
     margin-right: 20px;
 }
-.reel
+
+/* medals */
+.m-counters {
+    display: flex;
+    margin-left: -20px;
+}
+.m-counter {
+    font-family: 'Digital Ints';
+    color: rgba(255, 0, 0, 0.616);
+    background-color: rgb(73, 28, 28);
+    height: 60px;
+    width: 140px;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 20px;
+    align-items: center;
+}
 /* ジャグラー本体 */
 .box {
     position: relative;

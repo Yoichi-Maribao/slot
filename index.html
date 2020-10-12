@@ -118,7 +118,15 @@
         <li class="reel"><img src="images/replay.png"></li>
       </ul>
     </div><!--end reels-->
-    </div><!--end reel-frame-->
+    <div class="m-counters">
+      <div class="m-counter" id="insert"></div>
+      <div class="m-counter" id="pay-counter"></div>
+      <div class="m-counter" id="pay"></div>
+      <div class="m-counter" id="medals"></div>
+    </div><!--end medal-counters-->
+    
+    </div><!--end container-->
+    
     <div class="gogolamp">
       <div id="gogo" class="normal box">
         <p>GOGO!</p>
@@ -141,7 +149,9 @@
         <button onclick="getId(this)" accesskey="2" id="2" class="yet pointer-none"></button>
         <button onclick="getId(this)" accesskey="3" id="3" class="yet pointer-none"></button>
       </div>   
-  <script src="./js/definition.js"></script>
-  <script src="./js/app.js"></script>
+      
+  <script src="./js/counters.js"></script>
+  <script src="./js/switches.js"></script>
+  <script src="./js/medals.js"></script>
 </body>
 </html>
