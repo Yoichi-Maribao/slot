@@ -1,8 +1,8 @@
-let insert = 0;
+let credit = 50;
 let medals = 0;
-let payCounter = 0;
+let payOut = 0;
 let pay = 0;
-document.getElementById('insert').innerHTML = insert;
+document.getElementById('credit').innerHTML = credit;
 document.getElementById('medals').innerHTML = medals;
-document.getElementById('pay-counter').innerHTML = payCounter;
+document.getElementById('pay-out').innerHTML = payOut;
 document.getElementById('pay').innerHTML = pay;

@@ -3,40 +3,27 @@ let playCounter = 0;
 let bonus = 0;
 const totalEmptyDigits = document.getElementById('totalEmptyDigits');
 const emptyDigits = document.getElementById('emptyDigits');
+const playEmptyDigits = document.getElementById('playEmptyDigits');
 
 function setCount() {
     document.getElementById('totalCounter').innerHTML = totalCounter;
     document.getElementById('bonus').innerHTML = bonus;
     document.getElementById('playCounter').innerHTML = totalCounter;
-
-    if(totalCounter < 10){
-        totalEmptyDigits.textContent = "000";
-    } else if(totalCounter >= 10 && totalCounter < 100) {
-        totalEmptyDigits.textContent = "00";
-    } else if(totalCounter >= 100 && totalCounter < 1000) {
-        totalEmptyDigits.textContent = "0";
-    } else if(totalCounter >= 1000) {
-        totalEmptyDigits.textContent = "";
-    }
-
-    if(bonus < 10){
-        emptyDigits.textContent = "000";
-    } else if(bonus >= 10 && bonus < 100) {
-        emptyDigits.textContent = "00";
-    } else if(bonus >= 100 && bonus < 1000) {
-        emptyDigits.textContent = "0";
-    } else if(bonus >= 1000) {
-        emptyDigits.textContent = "";
-    }
-
-    if(playCounter < 10){
-        playEmptyDigits.textContent = "000";
-    } else if(playCounter >= 10 && playCounter < 100) {
-        playEmptyDigits.textContent = "00";
-    } else if(playCounter >= 100 && playCounter < 1000) {
-        playEmptyDigits.textContent = "0";
-    } else if(playCounter >= 1000) {
-        playEmptyDigits.textContent = "";
+    let arrayCounter = [
+        [totalCounter, totalEmptyDigits],
+        [bonus, emptyDigits],
+        [playCounter, playEmptyDigits]
+    ]
+    for(let j = 0; j < 3; j++){
+        if(arrayCounter[j][0] < 10){
+            arrayCounter[j][1].textContent = "000";
+        } else if(arrayCounter[j][0] >= 10 && arrayCounter[j][0] < 100) {
+            arrayCounter[j][1].textContent = "00";
+        } else if(arrayCounter[j][0] >= 100 && arrayCounter[j][0] < 1000) {
+            arrayCounter[j][1].textContent = "0";
+        } else if(arrayCounter[j][0] >= 1000) {
+            arrayCounter[j][1].textContent = "";
+        }
     }
 }
 setCount();
